@@ -8,4 +8,13 @@ func main() {
 	array := []string{"Hiren", "Ashok"}
 	array = append(array, "Vaidya")
 	fmt.Println(array)
+
+	prices := []float64{19.99, 50.5, 3.75}
+	total := 0.0
+
+	for _, price := range prices {
+		total += price
+		//	fmt.Println(price)
+	}
+	fmt.Println("Total:", total)
 }
