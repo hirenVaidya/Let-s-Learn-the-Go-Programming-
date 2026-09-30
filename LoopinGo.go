@@ -58,4 +58,76 @@ func main() {
 	for i := range 3 {
 		fmt.Println("round", i) // 0, 1, 2
 	}
+
+	package main
+
+import "fmt"
+
+func main() {
+    // Basic switch: no break needed, cases don't fall through
+    day := 3
+    switch day {
+    case 1:
+        fmt.Println("Monday")
+    case 2:
+        fmt.Println("Tuesday")
+    case 3:
+        fmt.Println("Wednesday")
+    default:
+        fmt.Println("Other day")
+    }
+
+    // Multiple values per case
+    switch day {
+    case 6, 7:
+        fmt.Println("Weekend")
+    case 1, 2, 3, 4, 5:
+        fmt.Println("Weekday")
+    }
+
+    // Switch with no expression (cleaner than if-else chains)
+    score := 82
+    switch {
+    case score >= 90:
+        fmt.Println("A")
+    case score >= 80:
+        fmt.Println("B")
+    case score >= 70:
+        fmt.Println("C")
+    default:
+        fmt.Println("F")
+    }
+
+    // Switch with init statement
+    switch os := "linux"; os {
+    case "darwin":
+        fmt.Println("macOS")
+    case "linux":
+        fmt.Println("Linux")
+    default:
+        fmt.Println("Other")
+    }
+
+    // fallthrough: forces execution of the next case (rarely used)
+    switch 1 {
+    case 1:
+        fmt.Println("one")
+        fallthrough
+    case 2:
+        fmt.Println("two (via fallthrough)")
+    case 3:
+        fmt.Println("three") // not printed
+    }
+
+    // Type switch (you'll use this with interfaces later)
+    var v any = 3.14
+    switch t := v.(type) {
+    case int:
+        fmt.Println("int", t)
+    case string:
+        fmt.Println("string", t)
+    case float64:
+        fmt.Println("float64", t)
+    }
+}
 }
