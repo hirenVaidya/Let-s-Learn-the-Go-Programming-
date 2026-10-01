@@ -118,16 +118,16 @@ func main() {
     case 3:
         fmt.Println("three") // not printed
     }
-
+}
     // Type switch (you'll use this with interfaces later)
     var v any = 3.14
     switch t := v.(type) {
-    case int:
-        fmt.Println("int", t)
-    case string:
-        fmt.Println("string", t)
-    case float64:
-        fmt.Println("float64", t)
-    }
-}
+		case int:
+			fmt.Println("int", t)
+		case string:
+			fmt.Println("string", t)
+		case float64:
+			fmt.Println("float64", t)
+		}
+	}
 }
