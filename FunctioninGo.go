@@ -18,14 +18,15 @@ func main() {
 	u.Birthday()
 	fmt.Println(u.Greet(), u.Age) // Hi, Ravi 26
 
-	users := []user{u, {Name: "Priya", Age: 30}} // slice
-	users = append(users, user{"Amit", 22})
+	users := []user{u, {Name: "Alka", Age: 30}} // slice
+	users = append(users, user{"Hirn", 22})
 
 	byName := map[string]user{} // map
 	for _, x := range users {
 		byName[x.Name] = x
 	}
-	if v, ok := byName["Priya"]; ok { // "comma ok" idiom
+	if v, ok := byName["Hiren"]; ok { // "comma ok" idiom
 		fmt.Println(v.Age)
 	}
+
 }
