@@ -30,4 +30,9 @@ func main() {
 	fmt.Println("Length of slice after append:", len(slice))
 	fmt.Println("Capacity of slice after append:", cap(slice))
 
+	var mymap map[string]int = make(map[string]int)
+	fmt.Println(mymap)
+	var mymap2 = map[string]uint8{"Adam": 23, "sarah": 45}
+	fmt.Println(mymap2["Adam"])
+
 }
