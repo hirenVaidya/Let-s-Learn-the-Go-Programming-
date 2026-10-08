@@ -15,5 +15,6 @@ func main() {
 	var k int32 = 3
 	i = k
 	fmt.Println("The Value of k is :", k)
+	fmt.Println("The Value of i is :", i)
 
 }
