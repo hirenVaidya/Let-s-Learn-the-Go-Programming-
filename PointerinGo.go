@@ -17,4 +17,13 @@ func main() {
 	fmt.Println("The Value of k is :", k)
 	fmt.Println("The Value of i is :", i)
 
+	fmt.Println("-------The End-------")
+	fmt.Println("--Pointer in slices--")
+
+	var slice = []int{1, 3, 4}
+	var slice2 = slice
+	slice2[2] = 5
+	fmt.Println("The Value of slice is :", slice)
+	fmt.Println("The Value of slice is :", slice2)
+
 }
