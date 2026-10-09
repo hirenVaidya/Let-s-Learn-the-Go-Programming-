@@ -1,0 +1,21 @@
+package main
+
+import (
+    "fmt"
+    "math/rand"
+    "time"
+)
+
+var data = []string{"Hiren", "Ashok", "Vaidya", "Alka","Neha", "Ranjan","Ashok"}
+
+Func main(){
+    t0 := time.Now()
+    for i:= 0; i<len(data); i++{
+        datatansfer(i) 
+    } 
+}
+func datatansfer(i int) {
+    var delay float32 = rand.float32()*2000
+    time.sleep(time.duration(delay)*time.Millisecond)
+    fmt.Println("The Result from the database is:" data[i])
+}
