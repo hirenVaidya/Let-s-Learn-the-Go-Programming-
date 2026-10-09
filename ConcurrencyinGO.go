@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+var m = sync.Mutex{}
 var wg = sync.WaitGroup{}
 var data = []string{"Hiren", "Ashok", "Ranjan", "Neha", "Falguni"}
 var result = []string{}
@@ -24,6 +25,8 @@ func datatansfer(i int) {
 	var delay float32 = 2000
 	time.Sleep(time.Duration(delay) * time.Millisecond)
 	fmt.Println("The Result from the database is:", data[i])
+	m.Lock()
 	result = append(result, data[i])
+	m.Unlock()
 	wg.Done()
 }
