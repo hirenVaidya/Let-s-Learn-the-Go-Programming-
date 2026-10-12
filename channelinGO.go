@@ -14,5 +14,5 @@ func Process(c chan int) {
 	for i := 0; i < 5; i++ {
 		c <- i
 	}
-	//close(c)
+	close(c)
 }
