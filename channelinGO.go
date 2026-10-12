@@ -10,9 +10,9 @@ func main() {
 	}
 }
 func Process(c chan int) {
-	//defer close(c)
+	defer close(c)
 	for i := 0; i < 5; i++ {
 		c <- i
 	}
-	close(c)
+	//close(c)
 }
