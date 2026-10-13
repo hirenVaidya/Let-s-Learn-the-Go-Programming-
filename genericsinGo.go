@@ -12,13 +12,13 @@ func main() {
 
 }
 
-func suminslices[T int | float32 | float64](s []T) T {
-	var sum T
-	for _, v := range s {
-		sum += v
-	}
-	return sum
-}
+// func suminslices[T int | float32 | float64](s []T) T {
+// 	var sum T
+// 	for _, v := range s {
+// 		sum += v
+// 	}
+// 	return sum
+// }
 func suminslices[T any](s []T) bool {
 	return len(s) == 0
 }
