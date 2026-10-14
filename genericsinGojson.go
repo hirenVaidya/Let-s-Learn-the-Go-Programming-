@@ -18,17 +18,17 @@ type Purchase struct {
 }
 
 func main() {
-	var contracts []contractInfo = loadJSON("./contracts.json")
+	var contracts []contractInfo = loadJSON[contractInfo]("./contracts.json")
 	fmt.Println("contracts:", contracts)
 
-	var purchases []Purchase = loadJSON("./purchases.json")
+	var purchases []Purchase = loadJSON[Purchase]("./purchases.json")
 	fmt.Println("purchases:", purchases)
 }
 
 func loadJSON[T contractInfo | Purchase](filename string) []T {
 	data, _ := ioutil.ReadFile(filename)
 
-	var loaded = []t{}
+	var loaded = []T{}
 	json.Unmarshal(data, &loaded)
 	return loaded
 
